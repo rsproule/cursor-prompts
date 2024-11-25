@@ -44,7 +44,7 @@ Gives the chat a few recently viewed files in reverse order of when they were la
 > // Start Generation Here  
 > // INSERT_YOUR_CODE   
 > // End Generation Here  
-> ```
+> \```
 >
 
 That indicates where to insert the generated code.
