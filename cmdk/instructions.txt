@@ -1,0 +1,19 @@
+## Instructions
+
+### Generation Prompt
+
+<<THIS IS WHERE THE USERS cmd-k PROMPT IS INJECTED>>
+
+
+## Your Task
+
+Generate the code to be inserted in accordance with the instructions.
+
+Please format your output as:
+```
+// Start Generation Here
+// INSERT_YOUR_CODE
+// End Generation Here
+```
+
+Immediately start your response with ```

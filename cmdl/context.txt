@@ -1,0 +1,8 @@
+```markdown
+"content": "# Inputs  
+
+## Current File  
+Here is the file I'm looking at. It might be truncated from above and below and, if so, is centered around my cursor.  
+
+
+<<INSERT CURRENT FILE>>

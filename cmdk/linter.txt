@@ -1,0 +1,48 @@
+## More potentially helpful context
+
+#### lint_context_0
+
+**File name**: `basic.js`  
+**Lints in context**:  
+<lints>  
+typescript
+import * as fs from "fs";
+
+function logToFile(message: string, filename: string = "log.txt"): void {
+Err|Type annotations can only be used in TypeScript files.
+Err|Type annotations can only be used in TypeScript files.
+Err|Type annotations can only be used in TypeScript files.
+  const timestamp: string = new Date().toISOString();
+Err|Type annotations can only be used in TypeScript files.
+  const logMessage: string = `${timestamp} - ${message}\n`;
+Err|Type annotations can only be used in TypeScript files.
+
+  fs.appendFile(filename, logMessage, (err: NodeJS.ErrnoException | null) => {
+Err|Type annotations can only be used in TypeScript files.
+    if (err) {
+      console.error("Error writing to file", err);
+    } else {
+
+
+
+
+---- 
+
+
+## More potentially helpful context
+
+#### lint_context_0
+
+File name: `server/src/main.rs`  
+Lints in context:
+...
+    tracing::info!("Device registered successfully");
+
+    // Return the generated API_KEY
+    Ok(Json(json!({ "api_key": api_key })))
+Err|borrow of moved value: `api_key`
+value borrowed here after move
+}
+
+// Handler for /poll_device_code/:device_code
+```

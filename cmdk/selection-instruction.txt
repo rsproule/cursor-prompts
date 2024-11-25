@@ -1,0 +1,27 @@
+Please rewrite this selection following these instructions:  
+
+## Edit Prompt  
+
+Add TypeScript support, types everywhere.  
+
+## Selection to Rewrite  
+```typescript  
+// Start of Selection  
+import fs from \"fs\";  
+
+function logToFile(message: string, filename: string = \"log.txt\"): void {  
+  const timestamp: string = new Date().toISOString();  
+  const logMessage: string = `${timestamp} - ${message}\\n`;  
+
+  fs.appendFile(filename, logMessage, (err: NodeJS.ErrnoException | null): void => {  
+    if (err) {  
+      console.error(\"Error writing to file\", err);  
+    } else {  
+      console.log(\"Log message written to file\");  
+    }  
+  });  
+}  
+
+// Example usage  
+logToFile(\"This is a log message.\");  
+// End of Selection  
