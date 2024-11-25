@@ -40,11 +40,12 @@ The inline editing prompt has 3 main components:
 
 Gives the chat a few recently viewed files in reverse order of when they were last viewed. Includes the file being edited last with a special comment:
 
-```
-... 
-// Start Generation Here  
-// End Generation Here  
-```
+>
+> // Start Generation Here  
+> // INSERT_YOUR_CODE   
+> // End Generation Here  
+> ```
+>
 
 That indicates where to insert the generated code.
 
