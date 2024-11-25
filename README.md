@@ -5,7 +5,7 @@ Cursor prompts for cmd-k inline code editing and the cmd-L in-editor chat window
 ## Cmd-k
 The inline editing prompt has 3 main components:
 
-[The systems prompt](./cmdk/system-prompts.txt)
+[The system prompt](./cmdk/system-prompts.txt)
 
 ```
 You are an intelligent programmer. You are helping a colleague insert a piece of code in a file.
@@ -161,8 +161,8 @@ Finally, the raw user chat message is passed in with no additional context.
 
 ## Methodology
 
-These are the prompts that cursor forwards to OpenAI when I use cursor with api key. I captured these by replacing the openai api (base url in Cursor>Settings>Model) with a [simple proxy](https://github.com/6/openai-caching-proxy-worker) that I modified to log the requests/responses to/from open ai.
+These are the prompts that cursor forwards to OpenAI when I use cursor with api key. I captured these by replacing the OpenAI api (base url in Cursor>Settings>Model) with a [simple proxy](https://github.com/6/openai-caching-proxy-worker) that I modified to log the requests/responses to/from OpenAI.
 
-I expected to be able to just see these requests coming out of the cursor electron app but it seems to be proxying these request through some other process. There are no evident requests to openai in the network tab of the dev tools. _shrug_
+I expected to be able to just see these requests coming out of the cursor electron app but it seems to be proxying these request through some other process. There are no evident requests to openai in the network tab in dev tools. _shrug_
 
 I am also curious if cursor does some different prompting when they send to cursor-small models. This will likely require more prompt injection style techniques to try to get the model to reveal the prompts since end users have no control over the requests on the cursor server side.
