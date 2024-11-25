@@ -81,12 +81,13 @@ Here is an example of a prompt with linter errors:
 > #### lint_context_0
 > 
 > File name: `server/src/main.rs`  
-> Lints in context:
+> Lints in context:     
+> 
 > ...
 >     tracing::info!("Device registered successfully");
 > 
->     // Return the generated API_KEY
->     Ok(Json(json!({ "api_key": api_key })))
+>  // Return the generated API_KEY  
+>  Ok(Json(json!({ "api_key": api_key })))  
 > Err|borrow of moved value: `api_key`
 > value borrowed here after move
 > }
@@ -103,7 +104,7 @@ The [system prompt](./cmdl/system-message.txt) includes a few rules to get the L
 > 
 > 1. When the user is asking for edits to their code, please output a simplified version of the code block that highlights the changes necessary and adds comments to indicate where unchanged code has been skipped. For example:  
 > 
-> ````language:path/to/file  
+> \```language:path/to/file  
 > // ... existing code ...  
 > {{ edit_1 }}  
 > // ... existing code ...  
@@ -119,18 +120,19 @@ The [system prompt](./cmdl/system-message.txt) includes a few rules to get the L
 > 
 > 5. When writing out new code blocks, please specify the language ID after the initial backticks, like so:  
 > 
-> ````python  
+> \```python  
 > {{ code }}  
+> \```
 > 
 > 6. When writing out code blocks for an existing file, please also specify the file path after the initial backticks and restate the method/class your code block belongs to, like so:  
 > 
-> ````language:some/other/file  
+> \```language:some/other/file  
 > function AIChatHistory() {  
 >     ...  
 >     {{ code }}  
 >     ...  
 > }  
-> ````"  
+> \```
 
 Then there is a [basic context building](./cmdl/context.txt) which just seems to pass the current file content closest to the cursor.
 
